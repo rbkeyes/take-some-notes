@@ -1,5 +1,3 @@
-// file copied from mini project, use for reference if needed
-
 const fs = require('fs');
 const util = require('util');
 

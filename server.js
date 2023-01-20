@@ -5,15 +5,15 @@ const path = require('path');
 
 const api = require('./routes/index.js');
 
-const PORT = process.env.PORT || 3001;
+const PORT = process.env.PORT || 3002;
 
 // express app
 const app = express();
 
-// middleward for parsing JSON, urlencoded form data
-// app.use(express.json());
-// app.use(express.urlencoded({ extended: true}));
-// app.use('/api', api);
+// middleware for parsing JSON, urlencoded form data
+app.use(express.json());
+app.use(express.urlencoded( {extended: false}));
+app.use('/api', api);
 
 // serve all files from public folder
 app.use(express.static('public'));
