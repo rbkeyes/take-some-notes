@@ -31,7 +31,7 @@ app.get('/api/notes', (req, res) => {
     console.info(notesDb);
 });
 
-
+// app.get('/api/notes', (req, res) => res.json('./db/db.json'));
 
 
 

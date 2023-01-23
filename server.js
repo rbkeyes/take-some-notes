@@ -1,17 +1,13 @@
-// import dependencies
-const fs = require('fs'); //fs might need to go in a different file, move if need be
 const express = require('express');
 const path = require('path');
+
+const notesDb = require('./db/db.json');
 
 // assign PORT
 const PORT = process.env.PORT || 3002;
 
 // express app
 const app = express();
-
-// middleware for parsing JSON, urlencoded form data
-app.use(express.json());
-app.use(express.urlencoded({ extended: true }));
 
 // serve static files from public folder
 app.use(express.static('public'));
@@ -21,7 +17,10 @@ app.get('/notes', (req, res) => {
     res.sendFile(path.join(__dirname, '/public/notes.html'));
 });
 
-app.get('/api/notes', (req, res) => res.json('./db/db.json'));
+app.get('/api/notes', (req, res) => {
+    res.json(notesDb);
+    console.info(notesDb);
+});
 
 // wildcard route directs back to public index if no match
 app.get('*', (req, res) =>
