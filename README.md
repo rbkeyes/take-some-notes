@@ -7,31 +7,10 @@ pseudocode for project
 - code to store/retrieve will be in routes
 
 
+## Resources
+Auto-refresh changes in browser with livereload and nodemon:
+https://bytearcher.com/articles/refresh-changes-browser-express-livereload-nodemon/
 
-// const api = require('./routes/index.js');
-const { v4: uuidv4 } = require('uuid');
-
-const { readFromFile, writeToFile, readAndAppend } = require('./helpers/fsUtils')
-const notesDb = require('./db/db.json')
-
-
-
-// middleware for parsing JSON, urlencoded form data
-app.use(express.json());
-app.use(express.urlencoded({ extended: true }));
-app.use('/api', api);
-
-
-
-
-
-app.get('/api/notes', (req, res) => {
-    // readFromFile('notesDb').then((data) => 
-    res.json(JSON.parse(notesDb))
-    console.info(notesDb);
-});
-
-// app.get('/api/notes', (req, res) => res.json('./db/db.json'));
-
-
+Very basic expressjs tutorial:
+https://www.tutorialsteacher.com/nodejs/expressjs-web-application
 
