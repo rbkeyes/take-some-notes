@@ -1,28 +1,34 @@
-const notes = require('express').Router();
-const { v4: uuidv4 } = require('uuid');
-const {
-  readFromFile,
-  readAndAppend,
-  writeToFile,
-} = require('../helpers/fsUtils');
+// const notes = require('express').Router();
+// const { v4: uuidv4 } = require('uuid');
 
-// GET route to retrieve notes
-notes.get('/', (req, res) => {
-    readFromFile('./db/db.json').then((data) => res.json(JSON.parse(data)));
-});
+// const db = require('../db/db.json')
 
-// GET route for specific note by id
-notes.get('/:id', (req, res) => {
-    const noteId = req.params.id;
-    readFromFile('./db/db.json')
-    .then((data) => JSON.parse(data))
-    .then((json) => {
-        const result = json.filter((tip) => notes.id === noteId);
-        return result.length > 0
-        ?res.json (result)
-        : res.json('No note with that ID')
-    });
-});
+// // GET route to retrieve notes
+// notes.get('/api/notes', (req, res) => { 
+//     res.json(saved);
+//     console.info(saved)
+//   });
+
+// // POST route to add a note
+// // notes.post('/notes', (req, res) => {
+// //     const { title, text } = req.body;
+
+// //     console.info(`${req.method} request add a note was received`);
+// //     console.log(req.body);
+
+// //     if (req.body) {
+// //         const newNote = {
+// //             title,
+// //             text,
+// //             id: uuidv4(),
+// //         };
+
+// //         readAndAppend(newNote, notesDb);
+// //         res.json(`New note added 📝`);
+// //     } else {
+// //         res.errored('Unable to add note ❌');
+// //     };
+// // });
 
 
-module.exports = notes;
+// module.exports = notes;
