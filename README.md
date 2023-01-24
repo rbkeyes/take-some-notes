@@ -14,3 +14,6 @@ https://bytearcher.com/articles/refresh-changes-browser-express-livereload-nodem
 Very basic expressjs tutorial:
 https://www.tutorialsteacher.com/nodejs/expressjs-web-application
 
+mdn web docs - array.prototype.filter():
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter
+
