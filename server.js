@@ -43,18 +43,18 @@ app.post('/api/notes', (req, res) => {
         notesDb.push(newNote);
         console.log(notesDb);
 
-        // read existing db.json file
-        fs.readFile('./db/db.json', 'utf8', (err, data) => {
-            if (err) {
-                console.error(err);
-            } else {
-                // parse data from db.json
-                const parsedNotes = JSON.parse(data);
-                // push newNote to parsedNotes
-                parsedNotes.push(newNote);
+        // // read existing db.json file
+        // fs.readFile('./db/db.json', 'utf8', (err, data) => {
+        //     if (err) {
+        //         console.error(err);
+        //     } else {
+        //         // parse data from db.json
+        //         const parsedNotes = JSON.parse(data);
+        //         // push newNote to parsedNotes
+        //         parsedNotes.push(newNote);
 
                 // write db.json file with parsedNotes array (includes newNote)
-                fs.writeFile('./db/db.json', JSON.stringify(parsedNotes, null, 4), (err) => {
+                fs.writeFile('./db/db.json', JSON.stringify(notesDb, null, 4), (err) => {
                     if (err) {
                         console.error(err)
                     } else {
@@ -62,8 +62,8 @@ app.post('/api/notes', (req, res) => {
                         console.info('Notes database updated')
                     };
                 });
-            };
-        });
+            // };
+        // });
     } else {
         // if unsuccessful
         res.json('Unable to add note at this time.')
@@ -71,22 +71,22 @@ app.post('/api/notes', (req, res) => {
     };
 });
 
-app.delete('/api/notes/:noteId', (req, res) => {
-    const currentId = req.body.noteId
+// app.delete('/api/notes/:noteId', (req, res) => {
+//     const currentId = req.body.noteId
 
-    const updatedNotes = notesDb.filter(note => note.noteId !== currentId)
+//     const updatedNotes = notesDb.filter(note => note.noteId !== currentId)
     
-    notesDb = updatedNotes;
+//     notesDb = updatedNotes;
 
-    fs.writeFile('./db/db.json', JSON.stringify(updatedNotes, null, 4), (err) => {
-        if (err) {
-            console.error(err)
-        } else {
-            res.json(`Note with id of ${currentId} was successfully deleted`)
-            console.info(`Note with id of ${currentId} was successfully deleted`)
-        };
-    });
-});
+//     fs.writeFile('./db/db.json', JSON.stringify(updatedNotes, null, 4), (err) => {
+//         if (err) {
+//             console.error(err)
+//         } else {
+//             res.json(`Note with id of ${currentId} was successfully deleted`)
+//             console.info(`Note with id of ${currentId} was successfully deleted`)
+//         };
+//     });
+// });
 
 // route directs back to public index if no match to specified route
 app.get('*', (req, res) =>
