@@ -1,15 +1,5 @@
 [
     {
-        "title": "pick up kids",
-        "text": "at 1:30 and 2:25",
-        "id": "379a602b-a947-4a4a-8bff-0ba1a0419fad"
-    },
-    {
-        "title": "tatum' show",
-        "text": "6pm at washington",
-        "id": "90d2c1ae-be19-4ac0-9148-e50ca6b283bc"
-    },
-    {
         "title": "note",
         "text": "text",
         "id": "341e7d75-0927-49ee-a5e8-168752038b7b"
@@ -28,5 +18,10 @@
         "title": "another note",
         "text": "so many notes",
         "id": "7fe62b7f-1d0e-4cdd-b56a-c06c66877365"
+    },
+    {
+        "title": "leave soon",
+        "text": "to get tatum",
+        "id": "a62a3bdf-8555-4b5a-a756-0d1426ea127c"
     }
 ]

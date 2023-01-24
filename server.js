@@ -4,7 +4,7 @@ const path = require('path');
 const bodyParser = require('body-parser');
 const { v4: uuidv4 } = require('uuid');
 
-let notesDb = require('./db/db.json');
+let notesDb = require('./db/db.json')
 
 // assign PORT
 const PORT = process.env.PORT || 3002;
@@ -29,7 +29,8 @@ app.get('/api/notes', (req, res) => {
             console.error(err);
         } else {
             // parse data from db.json
-            res.json((JSON.parse(data)))
+            res.json((JSON.parse(data)));
+            console.info(`Request to get notes from db received.`)
         };
     });
 });
@@ -73,16 +74,17 @@ app.post('/api/notes', (req, res) => {
 });
 
 app.delete('/api/notes/:id', (req, res) => {
-    const currentId = req.body.id
+    const selectedId = req.params.id
 
-    const updatedNotes = notesDb.filter(note => note.id !== currentId)
+    const updatedNotes = notesDb.filter(note => note.id !== selectedId)
+    console.log(updatedNotes);
 
     fs.writeFile('./db/db.json', JSON.stringify(updatedNotes, null, 4), (err) => {
         if (err) {
             console.error(err)
         } else {
-            res.json(`Note with id of ${currentId} was successfully deleted`)
-            console.info(`Note with id of ${currentId} was successfully deleted`)
+            res.json(`Note with id of ${selectedId} was successfully deleted`)
+            console.info(`Note with id of ${selectedId} was successfully deleted`)
         };
     });
 });
