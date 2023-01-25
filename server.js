@@ -74,8 +74,6 @@ app.post('/api/notes', (req, res) => {
 app.delete('/api/notes/:id', (req, res) => {
     const selectedId = req.params.id
 
-    // const updatedNotes = jnotesDb.filter(note => note.id !== selectedId)
-    // console.log(updatedNotes);
     fs.readFile('./db/db.json', 'utf8', (err, data) => {
         if (err) {
             console.error(err);
