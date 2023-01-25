@@ -17,3 +17,6 @@ https://www.tutorialsteacher.com/nodejs/expressjs-web-application
 mdn web docs - array.prototype.filter():
 https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter
 
+util.promisify() mdn web docs:
+https://www.geeksforgeeks.org/node-js-util-promisify-method/
+
