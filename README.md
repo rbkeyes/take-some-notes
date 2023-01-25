@@ -12,6 +12,8 @@ I used this project as an opportunity to practice modular routing. I organized m
 
 I also looked up and used an npm that generates a unique identifier for each object in the db. It was excellent practice figuring out how to install and use just by reading the documentation provided. 
 
+Visit the deployed app [here](https://git.heroku.com/take-some-notes.git)!
+
 ## Table of Contents
 
 - [Installation](#installation)
@@ -57,4 +59,5 @@ Documentation used:
 ## Contact
 
 If you have any questions, find me on [GitHub](https://github.com/rbkeyes).
+
 Or, [email me](mailto:rbkeyes@gmail.com).
