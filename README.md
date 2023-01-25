@@ -12,6 +12,8 @@ I used this project as an opportunity to practice modular routing. I organized m
 
 I also looked up and used an npm that generates a unique identifier for each object in the db. It was excellent practice figuring out how to install and use just by reading the documentation provided. 
 
+Visit the deployed app [here](https://git.heroku.com/take-some-notes.git)!
+
 ## Table of Contents
 
 - [Installation](#installation)
@@ -35,6 +37,8 @@ Click on the plus sign in the upper right corner to start a new note.
 Click on the "Note Title" text area to begin entering your note. A save icon (floppy disk) will appear in the upper righthand corner of the page once you have entered some text into the note text area. When you are finished adding text, click the save icon to add your new note.
 
 To delete a note, click the delete icon (red trash can) to delete a note from the lefthand column.
+
+See demo below for functionality:
 
 https://user-images.githubusercontent.com/114431225/214712900-29fcdb3d-399d-4515-adcd-6816236ba358.mp4
 
