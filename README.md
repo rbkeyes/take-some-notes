@@ -36,7 +36,7 @@ Click on the "Note Title" text area to begin entering your note. A save icon (fl
 
 To delete a note, click the delete icon (red trash can) to delete a note from the lefthand column.
 
-![demo](https://user-images.githubusercontent.com/114431225/214712900-29fcdb3d-399d-4515-adcd-6816236ba358.mp4)
+https://user-images.githubusercontent.com/114431225/214712900-29fcdb3d-399d-4515-adcd-6816236ba358.mp4
 
 
 ## Credits
