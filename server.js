@@ -33,6 +33,7 @@ app.get('/api/notes', (req, res) => {
     });
 });
 
+// post note to db
 app.post('/api/notes', (req, res) => {
     //     // Destructuring assignment for the items in req.body
     const { title, text } = req.body;
@@ -71,11 +72,10 @@ app.post('/api/notes', (req, res) => {
     };
 });
 
+// delete note from db
 app.delete('/api/notes/:id', (req, res) => {
     const selectedId = req.params.id
 
-    // const updatedNotes = jnotesDb.filter(note => note.id !== selectedId)
-    // console.log(updatedNotes);
     fs.readFile('./db/db.json', 'utf8', (err, data) => {
         if (err) {
             console.error(err);
