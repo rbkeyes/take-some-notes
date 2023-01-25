@@ -1,9 +1,7 @@
 const express = require('express');
 const path = require('path');
 const bodyParser = require('body-parser');
-
-// import routes
-const api = require('./routes/notes');
+const api = require('./routes/index');
 
 // assign PORT
 const PORT = process.env.PORT || 3002;

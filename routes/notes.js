@@ -3,16 +3,14 @@ const notes = require('express').Router();
 const { v4: uuidv4 } = require('uuid');
 const { readFromFile, writeToFile, readAndAppend } = require('../helpers/fsUtils');
 
-const app = express();
-
 // get notes api
-app.get('/api/notes', (req, res) => {
+notes.get('/', (req, res) => {
     console.info('GET request for notes received');
     readFromFile('./db/db.json').then((data) => res.json(JSON.parse(data)));
 });
 
 // post note to db
-app.post('/api/notes', (req, res) => {
+notes.post('/', (req, res) => {
     console.info('POST request to add a note received');
     console.log(req.body);
 
@@ -35,7 +33,7 @@ app.post('/api/notes', (req, res) => {
 });
 
 // delete note from db
-app.delete('/api/notes/:id', (req, res) => {
+notes.delete('/:id', (req, res) => {
     const selectedId = req.params.id
 
     // read db.json & parse data, return json
